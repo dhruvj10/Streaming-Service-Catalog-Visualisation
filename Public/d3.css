@@ -1,0 +1,189 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #eef2f7;
+    color: #333;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Change from center to flex-start */
+}
+
+/* Header Styling */
+header {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    align-self: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+/* Layout Grid */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for wider cards */
+    gap: 40px; /* Spacing between cards */
+    max-width: 1200px; /* Maintain a wide layout */
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    justify-content: center; /* Center the grid horizontally */
+    margin-top: 2rem;
+    align-self: center;
+}
+
+/* Section Styling */
+.section {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 400px;
+}
+
+/* Visualization Containers */
+.section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #444;
+    text-align: center;
+}
+
+.chart-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 400px;
+    margin: 20px 0;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    font-size: 0.9em;
+    width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
+    align-self: center;
+}
+
+/* Tooltip Styling */
+.tooltip {
+    pointer-events: none;
+    max-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    position: absolute;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+
+    .section h2 {
+        font-size: 1.2em;
+    }
+
+    .chart-container {
+        min-height: 300px;
+    }
+}
+
+/* Add to your existing CSS */
+#galaxy-container {
+    width: 100vw;
+    height: 75vh;
+    position: relative;
+    background: #000005;
+    margin-bottom: 2rem;
+    left: 0;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.fps-counter {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 3px;
+    font-family: monospace;
+    z-index: 1000;
+}
+
+.instructions {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    z-index: 1000;
+}
+
+#planet-tooltip {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1001;
+}
+
+/* Streaming Universe Container */
+#streaming-universe-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: #000005;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}

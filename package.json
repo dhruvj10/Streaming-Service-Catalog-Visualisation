@@ -1,0 +1,16 @@
+{
+  "name": "dhruv-nina-saatvik-zayn",
+  "version": "1.0.0",
+  "description": "1. Installing dependecnies  We are using express and mongoose so you have to install those before connecting to mongo  npm init -y npm install express mongoose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mongoose": "^8.8.3"
+  }
+}
