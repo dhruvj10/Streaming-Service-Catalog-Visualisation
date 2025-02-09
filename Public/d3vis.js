@@ -2,10 +2,10 @@ import { universe } from './universe.js';
 
 
 Promise.all([
-  fetch('http://localhost:3003/api/movies/netflix-movies').then(response => response.json()),
-  fetch('http://localhost:3003/api/movies/prime-movies').then(response => response.json()),
-  fetch('http://localhost:3003/api/movies/hulu-movies').then(response => response.json()),
-  fetch('http://localhost:3003/api/movies/disney-movies').then(response => response.json()),
+  fetch('https://streaming-service-catalog-visualisation-5f9ev0wl1.vercel.app/api/movies/netflix-movies').then(response => response.json()),
+  fetch('https://streaming-service-catalog-visualisation-5f9ev0wl1.vercel.app/api/movies/prime-movies').then(response => response.json()),
+  fetch('https://streaming-service-catalog-visualisation-5f9ev0wl1.vercel.app/api/movies/hulu-movies').then(response => response.json()),
+  fetch('https://streaming-service-catalog-visualisation-5f9ev0wl1.vercel.app/api/movies/disney-movies').then(response => response.json()),
 ])
 .then(([netflixData, primeData, huluData, disneyData]) => {
   // Create streaming services data object first
@@ -224,7 +224,9 @@ Promise.all([
   }
 
 })
-.catch(error => console.error('Error fetching data:', error));function visualizeStackedBarChart(data) {
+.catch(error => console.error('Error fetching data:', error));
+
+function visualizeStackedBarChart(data) {
   // Group data by type and further by rating
   const groupedData = data.reduce((acc, movie) => {
     const type = movie.type || "Unknown"; // e.g., "Movie" or "TV Show"
@@ -616,7 +618,7 @@ function visualizeData(selectedDirectors) {
     const genres = [...new Set(directorsData.map(d => d.dominantGenre))];
     const colorScale = d3.scaleOrdinal()
         .domain(genres)
-        .range(genres.map((_, i) => new THREE.Color(d3.schemeSet3[i])));
+        .range(genres.map((_, i) => new THREE.Color(d3.schemeSet3[i]));
 
     // Size scale for bubbles
     const sizeScale = d3.scaleSqrt()
