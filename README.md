@@ -1,4 +1,4 @@
-# CSE478_Project-
+# A Unique Visualization of the Streaming Services Catalog
 Clone the main branch
 
 
